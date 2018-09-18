@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>449</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="load">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(182, 90, 136);
+font: 63 italic 14pt &quot;Bookman Old Style&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Load Image Form File</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="show">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(182, 90, 136);
+font: 63 italic 14pt &quot;Bookman Old Style&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Show Image From SharedMemory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(66, 66, 99);
+font: 63 italic 14pt &quot;Bookman Old Style&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

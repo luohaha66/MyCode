@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>1.png</file>
+        <file>2.png</file>
+        <file>10.png</file>
+        <file>e.jpg</file>
+        <file>计算器.png</file>
+    </qresource>
+</RCC>

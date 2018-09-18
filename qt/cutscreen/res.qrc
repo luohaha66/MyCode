@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/imag">
+        <file>img/copy.png</file>
+        <file>img/delete.png</file>
+        <file>img/save.png</file>
+    </qresource>
+</RCC>

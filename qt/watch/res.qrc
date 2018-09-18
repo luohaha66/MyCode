@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>im-time.png</file>
+    </qresource>
+</RCC>

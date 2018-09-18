@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>388</width>
+    <height>134</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+         <property name="text">
+          <string>IP        </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="ip">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+         <property name="text">
+          <string>PORT</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="port">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="log">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+         <property name="text">
+          <string>LOG     IN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="out">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(69, 27, 60);
+font: 57 italic 14pt &quot;Ubuntu&quot;;</string>
+         </property>
+         <property name="text">
+          <string>LOG   OUT</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

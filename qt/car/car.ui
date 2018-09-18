@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>car</class>
+ <widget class="QDialog" name="car">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>529</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="status">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(76, 47, 68);
+font: 75 italic 16pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>雷达</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="leida_dis">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>角度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="leida_view">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>电量</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="power">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>湿度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hum">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>辐射</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="radiate">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(50, 61, 27);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;
+color: rgb(13, 243, 222);</string>
+         </property>
+         <property name="text">
+          <string>温度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="tem">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(40, 63, 70);
+font: 75 italic 14pt &quot;Century Schoolbook L&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(227, 10, 253);
+background-color: rgb(15, 40, 46);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>云台1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="engine_7"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(227, 10, 253);
+background-color: rgb(15, 40, 46);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>云台2</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="engine_8"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(227, 10, 253);
+background-color: rgb(15, 40, 46);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>左侧速度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="l_speed"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(227, 10, 253);
+background-color: rgb(15, 40, 46);
+font: 75 italic 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>右侧速度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="r_speed"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QRadioButton" name="module_1">
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>跟随主人</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="led">
+         <property name="text">
+          <string>Led</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup_2</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="module_2">
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>巡线遁迹</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QRadioButton" name="module_3">
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>红外避障</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="camera">
+         <property name="text">
+          <string>cam</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup_2</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="module_4">
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Abyssinica SIL&quot;;</string>
+         </property>
+         <property name="text">
+          <string>超声避障</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QWebView" name="video">
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 italic 14pt &quot;Century Schoolbook L&quot;;
+background-color: rgb(229, 241, 242);
+color: rgb(7, 47, 50);</string>
+       </property>
+       <property name="url">
+        <url>
+         <string>about:blank</string>
+        </url>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="l1">
+         <property name="text">
+          <string>↖</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l2">
+         <property name="text">
+          <string>↑</string>
+         </property>
+         <property name="shortcut">
+          <string>Up</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l3">
+         <property name="text">
+          <string>↗</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="l4">
+         <property name="text">
+          <string>←</string>
+         </property>
+         <property name="shortcut">
+          <string>Left</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l5">
+         <property name="text">
+          <string>S</string>
+         </property>
+         <property name="shortcut">
+          <string>Space</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l6">
+         <property name="text">
+          <string>→</string>
+         </property>
+         <property name="shortcut">
+          <string>Right</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QPushButton" name="l7">
+         <property name="text">
+          <string>↙</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l8">
+         <property name="text">
+          <string>↓</string>
+         </property>
+         <property name="shortcut">
+          <string>Down</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="l9">
+         <property name="text">
+          <string>↘</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>l1</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l2</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l3</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>519</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l4</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>435</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l5</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l6</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>421</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l7</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>223</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l8</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l9</sender>
+   <signal>clicked()</signal>
+   <receiver>car</receiver>
+   <slot>on_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>581</x>
+     <y>483</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>596</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>engine_7</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>car</receiver>
+   <slot>on_spinbox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>engine_8</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>car</receiver>
+   <slot>on_spinbox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>l_speed</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>car</receiver>
+   <slot>on_spinbox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>r_speed</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>car</receiver>
+   <slot>on_spinbox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_button_clicked()</slot>
+  <slot>on_spinbox_changed()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
+ </buttongroups>
+</ui>

@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/imag">
+        <file>img/5.png</file>
+        <file>img/10.png</file>
+        <file>img/11.png</file>
+        <file>img/all.png</file>
+        <file>img/color.png</file>
+        <file>img/copy.png</file>
+        <file>img/Cut.png</file>
+        <file>img/exit.png</file>
+        <file>img/font.png</file>
+        <file>img/help.png</file>
+        <file>img/new.png</file>
+        <file>img/open.png</file>
+        <file>img/paste.png</file>
+        <file>img/redo.png</file>
+        <file>img/resave.png</file>
+        <file>img/save.png</file>
+        <file>img/time.png</file>
+        <file>img/timg.gif</file>
+        <file>img/undo.png</file>
+        <file>img/wen.png</file>
+        <file>img/关于.png</file>
+        <file>img/官网.png</file>
+        <file>img/软件.png</file>
+        <file>img/12.png</file>
+        <file>img/a.png</file>
+        <file>img/b.png</file>
+        <file>img/c.png</file>
+        <file>img/d.png</file>
+    </qresource>
+</RCC>

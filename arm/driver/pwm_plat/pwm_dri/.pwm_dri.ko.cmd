@@ -1,0 +1,1 @@
+cmd_/home/ha/arm/driver/pwm_plat/pwm_dri/pwm_dri.ko := arm-linux-ld -EL -r  -T /home/ha/linux-3.14/scripts/module-common.lds --build-id  -o /home/ha/arm/driver/pwm_plat/pwm_dri/pwm_dri.ko /home/ha/arm/driver/pwm_plat/pwm_dri/pwm_dri.o /home/ha/arm/driver/pwm_plat/pwm_dri/pwm_dri.mod.o

@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>1.png</file>
+        <file>2.png</file>
+        <file>3.png</file>
+        <file>4.png</file>
+        <file>5.png</file>
+        <file>6.png</file>
+        <file>8.png</file>
+        <file>9.png</file>
+        <file>c.png</file>
+        <file>c1.png</file>
+        <file>c2.png</file>
+        <file>c3.png</file>
+        <file>c4.png</file>
+        <file>c5.png</file>
+        <file>c6.png</file>
+        <file>c7.png</file>
+        <file>c8.png</file>
+        <file>client.png</file>
+        <file>hover.png</file>
+        <file>left.png</file>
+        <file>left1.png</file>
+        <file>off.png</file>
+        <file>off1.png</file>
+        <file>off2.png</file>
+        <file>off3.png</file>
+        <file>on.png</file>
+        <file>on1.png</file>
+        <file>on2.png</file>
+        <file>on3.png</file>
+        <file>play.png</file>
+        <file>play1.png</file>
+        <file>right.png</file>
+        <file>right1.png</file>
+        <file>stop.png</file>
+        <file>stop1.png</file>
+        <file>watch.png</file>
+        <file>ImageMagick-Fix-PNG.bat</file>
+    </qresource>
+</RCC>

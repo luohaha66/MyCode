@@ -1,0 +1,1 @@
+cmd_/home/ha/arm/driver/led/led/led.ko := arm-linux-ld -EL -r  -T /home/ha/linux-3.14/scripts/module-common.lds --build-id  -o /home/ha/arm/driver/led/led/led.ko /home/ha/arm/driver/led/led/led.o /home/ha/arm/driver/led/led/led.mod.o

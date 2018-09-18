@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/imag">
+        <file>img/1.png</file>
+        <file>img/文件.png</file>
+        <file>img/文件夹.png</file>
+    </qresource>
+</RCC>
