@@ -1,0 +1,11 @@
+.\objects\acc.o: Lib_BSP\src\acc.c
+.\objects\acc.o: F:\keli_v5\core\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\acc.o: .\Lib_MCU\inc\lpc11xx.h
+.\objects\acc.o: .\Lib_MCU\inc\core_cm0.h
+.\objects\acc.o: F:\keli_v5\core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\acc.o: .\Lib_MCU\inc\system_LPC11xx.h
+.\objects\acc.o: .\Lib_MCU\inc\i2c.h
+.\objects\acc.o: .\Lib_BSP\inc\oled2864.h
+.\objects\acc.o: .\Lib_BSP\inc\key.h
+.\objects\acc.o: .\Lib_BSP\inc\tools.h
+.\objects\acc.o: .\Lib_BSP\inc\acc.h

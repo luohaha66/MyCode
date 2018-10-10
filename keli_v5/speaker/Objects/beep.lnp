@@ -1,0 +1,10 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\startup_lpc11xx.o"
+".\objects\system_lpc11xx.o"
+".\objects\gpio.o"
+".\objects\timer32.o"
+--strict --scatter ".\Objects\beep.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\beep.map" -o .\Objects\beep.axf

@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\objects\startup_lpc11xx.o"
+".\objects\system_lpc11xx.o"
+".\objects\tools.o"
+".\objects\main.o"
+".\objects\devcon.o"
+".\objects\gpio.o"
+".\objects\i2c.o"
+".\objects\light.o"
+".\objects\oled2864.o"
+".\objects\temp_hum.o"
+".\objects\ssp.o"
+".\objects\key.o"
+".\objects\acc.o"
+".\objects\adc.o"
+".\objects\timer32.o"
+--strict --scatter ".\Objects\light_temp.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\light_temp.map" -o .\Objects\light_temp.axf

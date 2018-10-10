@@ -1,0 +1,3 @@
+".\Objects\dht61.obj" 
+TO ".\Objects\dht11" 
+PRINT(".\Listings\dht11.m51") RAMSIZE(256) 

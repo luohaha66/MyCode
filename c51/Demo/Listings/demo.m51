@@ -1,0 +1,127 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/22/2018  21:28:28  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\demo.obj TO .\Objects\demo PRINT (.\Listings\demo.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\demo.obj (DEMO)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\demo (DEMO)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00D6H     UNIT         ?PR?MAIN?DEMO
+            CODE    00D9H     0055H     UNIT         ?C?LIB_CODE
+            CODE    012EH     001AH     UNIT         ?CO?DEMO
+            CODE    0148H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\demo (DEMO)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?DEMO
+
+?PR?MAIN?DEMO                  0008H    0004H
+  +--> ?CO?DEMO
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\demo (DEMO)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DEMO
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2018  21:28:28  PAGE 2
+
+
+  C:012EH         PUBLIC        LED
+  C:0138H         PUBLIC        LIGHT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        a
+  D:0008H         SYMBOL        c
+  D:0009H         SYMBOL        d
+  D:000AH         SYMBOL        f
+  -------         ENDDO         
+  C:0003H         LINE#         17
+  C:0003H         LINE#         18
+  C:0003H         LINE#         20
+  C:0004H         LINE#         21
+  C:0006H         LINE#         22
+  C:0008H         LINE#         23
+  C:000CH         LINE#         25
+  C:000CH         LINE#         26
+  C:000CH         LINE#         27
+  C:000FH         LINE#         28
+  C:0014H         LINE#         29
+  C:0014H         LINE#         30
+  C:0017H         LINE#         31
+  C:0017H         LINE#         32
+  C:0028H         LINE#         33
+  C:0028H         LINE#         34
+  C:002DH         LINE#         35
+  C:002DH         LINE#         36
+  C:0031H         LINE#         37
+  C:0031H         LINE#         38
+  C:0034H         LINE#         39
+  C:003CH         LINE#         40
+  C:003EH         LINE#         41
+  C:0043H         LINE#         42
+  C:0043H         LINE#         43
+  C:0046H         LINE#         44
+  C:0066H         LINE#         45
+  C:0068H         LINE#         46
+  C:006DH         LINE#         47
+  C:006DH         LINE#         48
+  C:0070H         LINE#         49
+  C:0090H         LINE#         50
+  C:0092H         LINE#         52
+  C:0092H         LINE#         53
+  C:0095H         LINE#         54
+  C:00AEH         LINE#         55
+  C:00AEH         LINE#         56
+  C:00B5H         LINE#         57
+  C:00B5H         LINE#         58
+  C:00B8H         LINE#         59
+  C:00B8H         LINE#         60
+  C:00C3H         LINE#         61
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        DEMO
+
+  -------         MODULE        ?C?UIDIV
+  C:00D9H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2018  21:28:28  PAGE 3
+
+
+
+Program Size: data=13.0 xdata=0 code=340
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

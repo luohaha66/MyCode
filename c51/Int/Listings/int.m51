@@ -1,0 +1,93 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/24/2018  13:58:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\int.obj TO .\Objects\int PRINT (.\Listings\int.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\int.obj (INT)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\int (INT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?INT
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0092H     0025H     UNIT         ?PR?INI0?INT
+            CODE    00B7H     000AH     UNIT         ?CO?INT
+            CODE    00C1H     0008H     UNIT         ?PR?MAIN?INT
+            CODE    00C9H     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\int (INT)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INI0?INT
+  +--> ?CO?INT
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?INT
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\int (INT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        INT
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/24/2018  13:58:13  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  C:0092H         PUBLIC        INI0
+  C:00C1H         PUBLIC        main
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  C:00B7H         PUBLIC        LED
+  D:0008H         PUBLIC        k
+  -------         PROC          INI0
+  C:0092H         LINE#         7
+  C:009CH         LINE#         9
+  C:009EH         LINE#         10
+  C:00ACH         LINE#         11
+  -------         ENDPROC       INI0
+  -------         PROC          MAIN
+  C:00C1H         LINE#         13
+  C:00C1H         LINE#         14
+  C:00C1H         LINE#         15
+  C:00C3H         LINE#         16
+  C:00C5H         LINE#         17
+  C:00C7H         LINE#         18
+  C:00C7H         LINE#         19
+  C:00C7H         LINE#         21
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        INT
+
+Program Size: data=10.0 xdata=0 code=205
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,184 @@
+C51 COMPILER V9.56.0.0   SCREEN                                                            09/23/2018 15:35:51 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE SCREEN
+OBJECT MODULE PLACED IN .\Objects\screen.obj
+COMPILER INVOKED BY: E:\Keil_v5\C51\BIN\C51.EXE screen.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\sc
+                    -reen.lst) TABS(2) OBJECT(.\Objects\screen.obj)
+
+line level    source
+
+   1          // c51 header
+   2          #include <AT89X52.h>
+   3          
+   4          sbit RS = P2 ^ 5;
+   5          sbit RW = P2 ^ 4;
+   6          sbit E = P2 ^ 3;
+   7          
+   8          void lcd1602_delay_ms(unsigned int ms)
+   9          {
+  10   1          unsigned int k;
+  11   1          unsigned int t = ms * 100;
+  12   1          for (k = 0; k < t; k++)
+  13   1              ;
+  14   1      }
+  15          
+  16          void lcd1602_is_busy()
+  17          {
+  18   1          RS = 0;
+  19   1          RW = 1;
+  20   1          P0 = 0xff;
+  21   1          E = 1;
+  22   1          while (P0_7 == 1)
+  23   1              ;
+  24   1          E = 0;
+  25   1      }
+  26          
+  27          void lcd1602_write_data(unsigned char d)
+  28          {
+  29   1          RS = 1;
+  30   1          RW = 0;
+  31   1          P0 = d;
+  32   1          E = 1;
+  33   1          E = 0;
+  34   1      }
+  35          
+  36          void lcd1602_write_data_busy(unsigned char d)
+  37          {
+  38   1          lcd1602_is_busy();
+  39   1          RS = 1;
+  40   1          RW = 0;
+  41   1          P0 = d;
+  42   1          E = 1;
+  43   1          E = 0;
+  44   1      }
+  45          
+  46          void lcd1602_write_directive(unsigned char command)
+  47          {
+  48   1          RS = 0;
+  49   1          RW = 0;
+  50   1          P0 = command;
+  51   1          E = 1;
+  52   1          E = 0;
+  53   1      }
+  54          
+C51 COMPILER V9.56.0.0   SCREEN                                                            09/23/2018 15:35:51 PAGE 2   
+
+  55          void lcd1602_write_directive_busy(unsigned char command)
+  56          {
+  57   1          lcd1602_is_busy();
+  58   1          RS = 0;
+  59   1          RW = 0;
+  60   1          P0 = command;
+  61   1          E = 1;
+  62   1          E = 0;
+  63   1      }
+  64          
+  65          void lcd1602_init()
+  66          {
+  67   1          lcd1602_delay_ms(15);
+  68   1          lcd1602_write_directive(0x38);
+  69   1          lcd1602_delay_ms(5);
+  70   1          lcd1602_write_directive(0x38);
+  71   1          lcd1602_delay_ms(5);
+  72   1          lcd1602_write_directive(0x38);
+  73   1          lcd1602_write_directive_busy(0x38);
+  74   1          lcd1602_write_directive_busy(0x08);
+  75   1          lcd1602_write_directive_busy(0x01);
+  76   1          lcd1602_write_directive_busy(0x06);
+  77   1          lcd1602_write_directive_busy(0x0c);
+  78   1          lcd1602_write_directive_busy(0x80);
+  79   1      }
+  80          
+  81          unsigned char code string[] = {0x49, 0x20, 0x6c, 0x6f, 0x76, 0x65, 0x20, 0x79, 0x6f, 0x75};
+  82          unsigned char code Font[] = {
+  83              0X00,
+  84              0X1F,
+  85              0X20,
+  86              0X20,
+  87              0X20,
+  88              0X20,
+  89              0X20,
+  90              0X10,
+  91              0X10,
+  92              0X20,
+  93              0X20,
+  94              0X20,
+  95              0X20,
+  96              0X20,
+  97              0X1F,
+  98              0X00,
+  99              0X00,
+ 100              0X00,
+ 101              0X80,
+ 102              0X40,
+ 103              0X20,
+ 104              0X10,
+ 105              0X08,
+ 106              0X04,
+ 107              0X04,
+ 108              0X08,
+ 109              0X10,
+ 110              0X20,
+ 111              0X40,
+ 112              0X80,
+ 113              0X00,
+ 114              0X00,
+ 115          };
+ 116          
+C51 COMPILER V9.56.0.0   SCREEN                                                            09/23/2018 15:35:51 PAGE 3   
+
+ 117          // set I/O
+ 118          sbit U15E3 = P1 ^ 3; // the E3 pin of U15(74HC138) connect to P1_3 pin
+ 119          sbit U14E3 = P1 ^ 4;
+ 120          
+ 121          void main(void)
+ 122          {
+ 123   1          unsigned char i = 0;
+ 124   1          unsigned char m = 0;
+ 125   1          unsigned char n = 0;
+ 126   1          lcd1602_init();
+ 127   1          for (i = 0; i < 10; i++)
+ 128   1          {
+ 129   2              lcd1602_write_data_busy(string[i]);
+ 130   2          }
+ 131   1          while (1)
+ 132   1          {
+ 133   2              P1 = 0;
+ 134   2              P0 = 0;
+ 135   2              P2 = 0;
+ 136   2              P0 = Font[m];
+ 137   2              P2 = Font[m + 16];
+ 138   2              P1 |= m & 0x07; //save the low 3 bits, throw away the high 5 bits, 0 ~7, eight status
+ 139   2              if (m < 8)
+ 140   2              {
+ 141   3                  U15E3 = 1;
+ 142   3                  U14E3 = 0;
+ 143   3              }
+ 144   2              else
+ 145   2              {
+ 146   3                  U14E3 = 1;
+ 147   3                  U15E3 = 0;
+ 148   3              }
+ 149   2              if (++m == 16)
+ 150   2              {
+ 151   3                  m = 0;
+ 152   3              }
+ 153   2              for (n = 0; n < 80; n++)
+ 154   2                  ;
+ 155   2          }
+ 156   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    219    ----
+   CONSTANT SIZE    =     42    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

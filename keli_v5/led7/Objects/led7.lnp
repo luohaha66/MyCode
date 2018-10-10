@@ -1,0 +1,12 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\startup_lpc11xx.o"
+".\objects\system_lpc11xx.o"
+".\objects\gpio.o"
+".\objects\led7seg.o"
+".\objects\seg7led.o"
+".\objects\ssp.o"
+--strict --scatter ".\Objects\led7.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\led7.map" -o .\Objects\led7.axf

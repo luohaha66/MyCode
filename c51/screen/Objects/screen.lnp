@@ -1,0 +1,3 @@
+".\Objects\screen.obj" 
+TO ".\Objects\screen" 
+PRINT(".\Listings\screen.m51") RAMSIZE(256) 

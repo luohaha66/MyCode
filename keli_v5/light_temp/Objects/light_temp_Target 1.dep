@@ -1,0 +1,126 @@
+Dependencies for Project 'light_temp', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Lib_MCU\src\startup_LPC11xx.s)(0x5007B6A4)(--cpu Cortex-M0 -g --apcs=interwork -IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 521"--list .\listings\startup_lpc11xx.lst --xref -o .\objects\startup_lpc11xx.o --depend .\objects\startup_lpc11xx.d)
+F (.\Lib_MCU\src\system_LPC11xx.c)(0x4E0430CA)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\system_lpc11xx.o --omf_browse .\objects\system_lpc11xx.crf --depend .\objects\system_lpc11xx.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+F (.\Lib_BSP\src\tools.c)(0x4E12C03A)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\tools.o --omf_browse .\objects\tools.crf --depend .\objects\tools.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_MCU\inc\uart.h)(0x4E1D2630)
+F (.\main.c)(0x59E2F176)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_BSP\inc\tools.h)(0x4E12C010)
+I (.\Lib_BSP\inc\light.h)(0x4E1D4130)
+I (.\Lib_BSP\inc\temp_hum.h)(0x4E1BFFAC)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_BSP\inc\oled2864.h)(0x4ECA5B2A)
+I (.\Lib_MCU\inc\i2c.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\ssp.h)(0x4E15226A)
+I (.\Lib_BSP\inc\acc.h)(0x4E2A6804)
+I (.\Lib_BSP\inc\key.h)(0x4E13CDC4)
+I (devcon.h)(0x59E2F8A4)
+F (.\devcon.c)(0x59E31B7D)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\devcon.o --omf_browse .\objects\devcon.crf --depend .\objects\devcon.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_BSP\inc\tools.h)(0x4E12C010)
+I (.\Lib_BSP\inc\light.h)(0x4E1D4130)
+I (.\Lib_BSP\inc\temp_hum.h)(0x4E1BFFAC)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_BSP\inc\oled2864.h)(0x4ECA5B2A)
+I (.\Lib_MCU\inc\i2c.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\ssp.h)(0x4E15226A)
+I (.\Lib_BSP\inc\acc.h)(0x4E2A6804)
+I (.\Lib_BSP\inc\key.h)(0x4E13CDC4)
+I (.\Lib_MCU\inc\timer32.h)(0x4E0409D4)
+I (.\Lib_MCU\inc\adc.h)(0x4E1BF382)
+F (.\Lib_MCU\src\gpio.c)(0x59097A4B)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+F (.\Lib_MCU\src\i2c.c)(0x4E01EB9C)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\type.h)(0x4E2C2CE0)
+I (.\Lib_MCU\inc\i2c.h)(0x4B821678)
+F (.\Lib_BSP\src\light.c)(0x59E1C864)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\light.o --omf_browse .\objects\light.crf --depend .\objects\light.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\i2c.h)(0x4B821678)
+I (.\Lib_BSP\inc\oled2864.h)(0x4ECA5B2A)
+I (.\Lib_BSP\inc\key.h)(0x4E13CDC4)
+I (.\Lib_BSP\inc\tools.h)(0x4E12C010)
+I (.\Lib_BSP\inc\light.h)(0x4E1D4130)
+F (.\Lib_BSP\src\oled2864.c)(0x4ECA5B14)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\oled2864.o --omf_browse .\objects\oled2864.crf --depend .\objects\oled2864.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_MCU\inc\ssp.h)(0x4E15226A)
+F (.\Lib_BSP\src\temp_hum.c)(0x59E0E099)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\temp_hum.o --omf_browse .\objects\temp_hum.crf --depend .\objects\temp_hum.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_BSP\inc\oled2864.h)(0x4ECA5B2A)
+I (.\Lib_BSP\inc\tools.h)(0x4E12C010)
+I (.\Lib_BSP\inc\temp_hum.h)(0x4E1BFFAC)
+F (.\Lib_MCU\src\ssp.c)(0x4E27DD02)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\ssp.o --omf_browse .\objects\ssp.crf --depend .\objects\ssp.d)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_MCU\inc\ssp.h)(0x4E15226A)
+F (.\Lib_BSP\src\key.c)(0x4E25CDE4)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\gpio.h)(0x4E12D0E0)
+I (.\Lib_BSP\inc\key.h)(0x4E13CDC4)
+F (.\Lib_BSP\src\acc.c)(0x4ECF0494)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\acc.o --omf_browse .\objects\acc.crf --depend .\objects\acc.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\i2c.h)(0x4B821678)
+I (.\Lib_BSP\inc\oled2864.h)(0x4ECA5B2A)
+I (.\Lib_BSP\inc\key.h)(0x4E13CDC4)
+I (.\Lib_BSP\inc\tools.h)(0x4E12C010)
+I (.\Lib_BSP\inc\acc.h)(0x4E2A6804)
+F (.\Lib_MCU\src\adc.c)(0x4E25DC44)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\adc.h)(0x4E1BF382)
+F (.\Lib_MCU\src\timer32.c)(0x4E0409F8)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_BSP\inc -I .\Lib_MCU\inc-IF:\keli_v5_WORK\light_temp\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\timer32.o --omf_browse .\objects\timer32.crf --depend .\objects\timer32.d)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\core_cm0.h)(0x4B821678)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x4C74B6C8)
+I (.\Lib_MCU\inc\timer32.h)(0x4E0409D4)

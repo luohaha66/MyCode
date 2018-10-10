@@ -1,0 +1,13 @@
+Dependencies for Project 'gpio_led', Target 'code': (DO NOT MODIFY !)
+F (.\Lib_MCU\src\system_LPC11xx.c)(0x58D8CB37)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_MCU\inc -I .\Lib_MCU\src -I F:\keli_v5\core\ARM\ARMCC\include-IF:\keli_v5_WORK\led\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\system_lpc11xx.o --omf_browse .\objects\system_lpc11xx.crf --depend .\objects\system_lpc11xx.d)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\LPC11xx.h)(0x58D8CB3E)
+I (.\Lib_MCU\inc\core_cm0.h)(0x58D8CB3D)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x58D8CB3F)
+F (.\Lib_MCU\src\startup_LPC11xx.s)(0x58D8CB35)(--cpu Cortex-M0 -g --apcs=interwork -IF:\keli_v5_WORK\led\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 521"--list .\listings\startup_lpc11xx.lst --xref -o .\objects\startup_lpc11xx.o --depend .\objects\startup_lpc11xx.d)
+F (.\main.c)(0x59DF73A2)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I .\Lib_MCU\inc -I .\Lib_MCU\src -I F:\keli_v5\core\ARM\ARMCC\include-IF:\keli_v5_WORK\led\RTE-IF:\keli_v5\core\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx-IF:\keli_v5\core\ARM\CMSIS\Include-D__UVISION_VERSION="521"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Lib_MCU\inc\lpc11xx.h)(0x58D8CB3E)
+I (.\Lib_MCU\inc\core_cm0.h)(0x58D8CB3D)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (.\Lib_MCU\inc\system_LPC11xx.h)(0x58D8CB3F)
+I (F:\keli_v5\core\ARM\ARMCC\include\stdio.h)(0x574E3E26)

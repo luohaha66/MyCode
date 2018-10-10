@@ -1,0 +1,238 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/01/2018  17:07:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\pcf8563.obj TO .\Objects\pcf8563 PRINT (.\Listings\pcf8563.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\pcf8563.obj (PCF8563)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\pcf8563 (PCF8563)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0026H     UNIT         ?PR?_PCF8563_WRITE_BYTE?PCF8563
+            CODE    0029H     0021H     UNIT         ?PR?PCF8563_READ_BYTE?PCF8563
+            CODE    004AH     0020H     UNIT         ?PR?_PCF8563_READ_CHAR?PCF8563
+            CODE    006AH     0017H     UNIT         ?PR?_PCF8563_WRITE_CHAR?PCF8563
+            CODE    0081H     0015H     UNIT         ?PR?MAIN?PCF8563
+            CODE    0096H     000FH     UNIT         ?PR?DELAY?PCF8563
+            CODE    00A5H     000DH     UNIT         ?PR?IIC_START?PCF8563
+            CODE    00B2H     000CH     UNIT         ?C_C51STARTUP
+            CODE    00BEH     0009H     UNIT         ?PR?IIC_STOP?PCF8563
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\pcf8563 (PCF8563)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PCF8563
+
+?PR?MAIN?PCF8563
+  +--> ?PR?_PCF8563_WRITE_CHAR?PCF8563
+  +--> ?PR?_PCF8563_READ_CHAR?PCF8563
+  +--> ?PR?DELAY?PCF8563
+
+?PR?_PCF8563_WRITE_CHAR?PCF8563
+  +--> ?PR?IIC_START?PCF8563
+  +--> ?PR?_PCF8563_WRITE_BYTE?PCF8563
+  +--> ?PR?IIC_STOP?PCF8563
+
+?PR?_PCF8563_READ_CHAR?PCF8563
+  +--> ?PR?IIC_START?PCF8563
+  +--> ?PR?_PCF8563_WRITE_BYTE?PCF8563
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/01/2018  17:07:55  PAGE 2
+
+
+  +--> ?PR?PCF8563_READ_BYTE?PCF8563
+  +--> ?PR?IIC_STOP?PCF8563
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\pcf8563 (PCF8563)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PCF8563
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:0096H         PUBLIC        delay
+  C:004AH         PUBLIC        _pcf8563_read_char
+  C:006AH         PUBLIC        _pcf8563_write_char
+  C:0081H         PUBLIC        main
+  C:0029H         PUBLIC        pcf8563_read_byte
+  C:0003H         PUBLIC        _pcf8563_write_byte
+  C:00A5H         PUBLIC        iic_start
+  B:0090H.0       PUBLIC        SDA
+  C:00BEH         PUBLIC        iic_stop
+  B:0090H.1       PUBLIC        SCL
+  -------         PROC          IIC_START
+  C:00A5H         LINE#         9
+  C:00A5H         LINE#         10
+  C:00A5H         LINE#         11
+  C:00A7H         LINE#         12
+  C:00A9H         LINE#         13
+  C:00AAH         LINE#         14
+  C:00ABH         LINE#         15
+  C:00ADH         LINE#         16
+  C:00AEH         LINE#         17
+  C:00AFH         LINE#         18
+  C:00B1H         LINE#         19
+  -------         ENDPROC       IIC_START
+  -------         PROC          IIC_STOP
+  C:00BEH         LINE#         21
+  C:00BEH         LINE#         22
+  C:00BEH         LINE#         23
+  C:00C0H         LINE#         24
+  C:00C2H         LINE#         25
+  C:00C3H         LINE#         26
+  C:00C4H         LINE#         27
+  C:00C6H         LINE#         31
+  -------         ENDPROC       IIC_STOP
+  -------         PROC          _PCF8563_WRITE_BYTE
+  D:0007H         SYMBOL        w_data
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         33
+  C:0003H         LINE#         34
+  C:0003H         LINE#         35
+  C:0005H         LINE#         36
+  C:0005H         LINE#         37
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/01/2018  17:07:55  PAGE 3
+
+
+  C:0005H         LINE#         38
+  C:0009H         LINE#         39
+  C:0009H         LINE#         40
+  C:000BH         LINE#         41
+  C:000DH         LINE#         43
+  C:000DH         LINE#         44
+  C:000FH         LINE#         45
+  C:000FH         LINE#         46
+  C:0010H         LINE#         47
+  C:0011H         LINE#         48
+  C:0013H         LINE#         49
+  C:0014H         LINE#         50
+  C:0018H         LINE#         51
+  C:001AH         LINE#         52
+  C:001BH         LINE#         53
+  C:001FH         LINE#         54
+  C:0021H         LINE#         55
+  C:0022H         LINE#         56
+  C:0024H         LINE#         57
+  C:0025H         LINE#         58
+  C:0026H         LINE#         59
+  C:0028H         LINE#         60
+  -------         ENDPROC       _PCF8563_WRITE_BYTE
+  -------         PROC          PCF8563_READ_BYTE
+  -------         DO            
+  D:0007H         SYMBOL        r_data
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0029H         LINE#         62
+  C:0029H         LINE#         63
+  C:0029H         LINE#         64
+  C:002BH         LINE#         65
+  C:002CH         LINE#         66
+  C:002CH         LINE#         67
+  C:002CH         LINE#         68
+  C:0030H         LINE#         69
+  C:0032H         LINE#         70
+  C:0034H         LINE#         71
+  C:0035H         LINE#         72
+  C:0036H         LINE#         73
+  C:0039H         LINE#         74
+  C:0039H         LINE#         75
+  C:003CH         LINE#         76
+  C:003EH         LINE#         78
+  C:003EH         LINE#         79
+  C:0041H         LINE#         80
+  C:0041H         LINE#         81
+  C:0043H         LINE#         82
+  C:0044H         LINE#         83
+  C:0045H         LINE#         84
+  C:0049H         LINE#         85
+  C:0049H         LINE#         86
+  -------         ENDPROC       PCF8563_READ_BYTE
+  -------         PROC          _PCF8563_READ_CHAR
+  D:0005H         SYMBOL        address
+  -------         DO            
+  D:0007H         SYMBOL        r_data
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/01/2018  17:07:55  PAGE 4
+
+
+  -------         ENDDO         
+  C:004AH         LINE#         89
+  C:004CH         LINE#         90
+  C:004CH         LINE#         91
+  C:004EH         LINE#         92
+  C:0051H         LINE#         95
+  C:0056H         LINE#         97
+  C:005BH         LINE#         99
+  C:005EH         LINE#         101
+  C:0063H         LINE#         103
+  C:0066H         LINE#         104
+  C:0069H         LINE#         105
+  C:0069H         LINE#         106
+  -------         ENDPROC       _PCF8563_READ_CHAR
+  -------         PROC          _PCF8563_WRITE_CHAR
+  D:0004H         SYMBOL        address
+  D:0005H         SYMBOL        w_data
+  C:006AH         LINE#         108
+  C:006CH         LINE#         109
+  C:006CH         LINE#         110
+  C:006FH         LINE#         113
+  C:0074H         LINE#         115
+  C:0079H         LINE#         117
+  C:007EH         LINE#         118
+  -------         ENDPROC       _PCF8563_WRITE_CHAR
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0096H         LINE#         121
+  C:0096H         LINE#         122
+  C:0096H         LINE#         123
+  C:0099H         LINE#         124
+  C:00A4H         LINE#         125
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0003H         SYMBOL        r_data
+  -------         ENDDO         
+  C:0081H         LINE#         128
+  C:0081H         LINE#         129
+  C:0081H         LINE#         130
+  C:0083H         LINE#         132
+  C:0088H         LINE#         133
+  C:0088H         LINE#         134
+  C:0088H         LINE#         135
+  C:008FH         LINE#         136
+  C:0091H         LINE#         137
+  C:0094H         LINE#         138
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PCF8563
+
+Program Size: data=9.0 xdata=0 code=199
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

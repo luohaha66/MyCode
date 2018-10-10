@@ -1,0 +1,9 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\gpio.o"
+".\objects\system_lpc11xx.o"
+".\objects\startup_lpc11xx.o"
+--strict --scatter ".\Objects\fan_led.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\fan_led.map" -o .\Objects\fan_led.axf

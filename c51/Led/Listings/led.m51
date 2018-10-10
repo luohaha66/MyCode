@@ -1,0 +1,115 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/24/2018  13:23:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\led.obj TO .\Objects\led PRINT (.\Listings\led.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\led.obj (LED)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  .\Objects\led (LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008AH     UNIT         ?PR?MAIN?LED
+            CODE    008DH     0060H     UNIT         ?CO?LED
+            CODE    00EDH     0016H     UNIT         ?C?LIB_CODE
+            CODE    0103H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\led (LED)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?LED
+
+?PR?MAIN?LED                   0008H    0004H
+  +--> ?CO?LED
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\led (LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:008DH         PUBLIC        Font
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/24/2018  13:23:10  PAGE 2
+
+
+  C:0003H         PUBLIC        main
+  B:0090H.4       PUBLIC        U14E3
+  B:0090H.3       PUBLIC        U15E3
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        m
+  D:0009H         SYMBOL        n
+  D:000BH         SYMBOL        index
+  -------         ENDDO         
+  C:0003H         LINE#         19
+  C:0003H         LINE#         20
+  C:0003H         LINE#         21
+  C:0006H         LINE#         22
+  C:000AH         LINE#         23
+  C:000CH         LINE#         24
+  C:000CH         LINE#         25
+  C:000CH         LINE#         26
+  C:000FH         LINE#         27
+  C:0011H         LINE#         28
+  C:0013H         LINE#         29
+  C:001EH         LINE#         30
+  C:0025H         LINE#         31
+  C:002BH         LINE#         32
+  C:0032H         LINE#         33
+  C:0032H         LINE#         34
+  C:0034H         LINE#         35
+  C:0036H         LINE#         36
+  C:0038H         LINE#         38
+  C:0038H         LINE#         39
+  C:003AH         LINE#         40
+  C:003CH         LINE#         41
+  C:003CH         LINE#         42
+  C:0043H         LINE#         43
+  C:0043H         LINE#         44
+  C:0049H         LINE#         45
+  C:004CH         LINE#         46
+  C:004CH         LINE#         47
+  C:004FH         LINE#         48
+  C:004FH         LINE#         49
+  C:0052H         LINE#         50
+  C:0073H         LINE#         52
+  C:0073H         LINE#         53
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED
+
+  -------         MODULE        ?C?SLCMP
+  C:00EDH         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+Program Size: data=13.0 xdata=0 code=271
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

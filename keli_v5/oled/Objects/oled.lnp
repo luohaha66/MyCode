@@ -1,0 +1,14 @@
+--cpu Cortex-M0
+".\objects\can.o"
+".\objects\startup_lpc11xx.o"
+".\objects\system_lpc11xx.o"
+".\objects\tools.o"
+".\objects\temp_hum.o"
+".\objects\main.o"
+".\objects\gpio.o"
+".\objects\ssp.o"
+".\objects\oled2864.o"
+--strict --scatter ".\Objects\oled.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\oled.map" -o .\Objects\oled.axf

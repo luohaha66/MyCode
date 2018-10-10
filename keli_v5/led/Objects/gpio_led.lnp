@@ -1,0 +1,8 @@
+--cpu Cortex-M0
+".\objects\system_lpc11xx.o"
+".\objects\startup_lpc11xx.o"
+".\objects\main.o"
+--strict --scatter ".\Objects\gpio_led.sct"
+--libpath "F:\keli_v5\core\ARM\ARMCC\lib" --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\gpio_led.map" -o .\Objects\gpio_led.axf

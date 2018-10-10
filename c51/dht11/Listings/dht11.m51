@@ -1,0 +1,376 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/05/2018  17:32:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\dht61.obj TO .\Objects\dht11 PRINT (.\Listings\dht11.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\dht61.obj (DHT61)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+  E:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\dht11 (DHT61)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0005H     UNIT         ?DT?DHT61
+            IDATA   000DH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00D4H     UNIT         ?PR?MAIN?DHT61
+            CODE    00D7H     0091H     UNIT         ?PR?MCU_GET_DATA_FROM_DHT?DHT61
+            CODE    0168H     008CH     UNIT         ?C_C51STARTUP
+            CODE    01F4H     003FH     UNIT         ?PR?DHT_TRANSMIT_DATA?DHT61
+            CODE    0233H     0028H     UNIT         ?C?LIB_CODE
+            CODE    025BH     0027H     UNIT         ?PR?LCD1602_INIT?DHT61
+            CODE    0282H     0018H     UNIT         ?PR?_LCD1602_DELAY_MS?DHT61
+            CODE    029AH     0018H     UNIT         ?PR?_LCD1602_WRITE_ADDRESS?DHT61
+            CODE    02B2H     0014H     UNIT         ?PR?_LCD1602_WRITE_DIRECTIVE?DHT61
+            CODE    02C6H     0010H     UNIT         ?C_INITSEG
+            CODE    02D6H     000FH     UNIT         ?PR?LCD1602_IS_BUSY?DHT61
+            CODE    02E5H     000EH     UNIT         ?PR?_LCD1602_WRITE_DATA_BUSY?DHT61
+            CODE    02F3H     000EH     UNIT         ?PR?_LCD1602_WRITE_DIRECTIVE_BUSY?DHT61
+            CODE    0301H     000AH     UNIT         ?PR?_LCD1602_DISPLAY?DHT61
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\dht11 (DHT61)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?DHT61
+  +--> ?C_INITSEG
+
+?PR?MAIN?DHT61
+  +--> ?PR?LCD1602_INIT?DHT61
+  +--> ?PR?MCU_GET_DATA_FROM_DHT?DHT61
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 2
+
+
+  +--> ?PR?_LCD1602_DISPLAY?DHT61
+
+?PR?LCD1602_INIT?DHT61
+  +--> ?PR?_LCD1602_WRITE_DIRECTIVE?DHT61
+  +--> ?PR?_LCD1602_WRITE_DIRECTIVE_BUSY?DHT61
+
+?PR?_LCD1602_WRITE_DIRECTIVE?DHT61
+  +--> ?PR?_LCD1602_DELAY_MS?DHT61
+
+?PR?_LCD1602_WRITE_DIRECTIVE_BUSY?DHT61
+  +--> ?PR?LCD1602_IS_BUSY?DHT61
+
+?PR?MCU_GET_DATA_FROM_DHT?DHT61
+  +--> ?PR?DHT_TRANSMIT_DATA?DHT61
+
+?PR?_LCD1602_DISPLAY?DHT61
+  +--> ?PR?_LCD1602_WRITE_ADDRESS?DHT61
+  +--> ?PR?_LCD1602_WRITE_DATA_BUSY?DHT61
+
+?PR?_LCD1602_WRITE_ADDRESS?DHT61
+  +--> ?PR?_LCD1602_WRITE_DIRECTIVE_BUSY?DHT61
+
+?PR?_LCD1602_WRITE_DATA_BUSY?DHT61
+  +--> ?PR?LCD1602_IS_BUSY?DHT61
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\dht11 (DHT61)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DHT61
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  C:025BH         PUBLIC        lcd1602_init
+  B:0080H.7       PUBLIC        P0_7
+  B:00B0H.6       PUBLIC        P3_6
+  D:0008H         PUBLIC        rh_h
+  B:00A0H.5       PUBLIC        RS
+  C:0003H         PUBLIC        main
+  D:0009H         PUBLIC        rh_l
+  B:00A0H.4       PUBLIC        RW
+  C:02E5H         PUBLIC        _lcd1602_write_data_busy
+  C:0282H         PUBLIC        _lcd1602_delay_ms
+  C:02BBH         PUBLIC        _lcd1602_write_directive
+  D:0089H         PUBLIC        TMOD
+  C:01F4H         PUBLIC        DHT_transmit_data
+  D:000AH         PUBLIC        check_sum
+  D:000BH         PUBLIC        t_h
+  D:000CH         PUBLIC        t_l
+  B:00A0H.3       PUBLIC        E
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 3
+
+
+  B:0088H.4       PUBLIC        TR0
+  C:029AH         PUBLIC        _lcd1602_write_address
+  C:0301H         PUBLIC        _lcd1602_display
+  C:02F3H         PUBLIC        _lcd1602_write_directive_busy
+  C:00D7H         PUBLIC        MCU_get_data_from_DHT
+  C:02D6H         PUBLIC        lcd1602_is_busy
+  -------         PROC          _LCD1602_DELAY_MS
+  D:0006H         SYMBOL        ms
+  -------         DO            
+  D:0004H         SYMBOL        k
+  D:0006H         SYMBOL        t
+  -------         ENDDO         
+  C:0282H         LINE#         15
+  C:0282H         LINE#         16
+  C:0282H         LINE#         18
+  C:0289H         LINE#         19
+  C:0299H         LINE#         21
+  -------         ENDPROC       _LCD1602_DELAY_MS
+  -------         PROC          LCD1602_IS_BUSY
+  C:02D6H         LINE#         23
+  C:02D6H         LINE#         24
+  C:02D6H         LINE#         25
+  C:02D8H         LINE#         26
+  C:02DAH         LINE#         27
+  C:02DDH         LINE#         28
+  C:02DFH         LINE#         29
+  C:02E2H         LINE#         31
+  C:02E4H         LINE#         32
+  -------         ENDPROC       LCD1602_IS_BUSY
+  -------         PROC          _LCD1602_WRITE_DATA_BUSY
+  D:0007H         SYMBOL        d
+  C:02E5H         LINE#         34
+  C:02E5H         LINE#         35
+  C:02E5H         LINE#         36
+  C:02E8H         LINE#         37
+  C:02EAH         LINE#         38
+  C:02ECH         LINE#         39
+  C:02EEH         LINE#         40
+  C:02F0H         LINE#         41
+  C:02F2H         LINE#         42
+  -------         ENDPROC       _LCD1602_WRITE_DATA_BUSY
+  C:02B4H         SYMBOL        L?0053
+  -------         PROC          L?0052
+  -------         ENDPROC       L?0052
+  C:02B4H         SYMBOL        L?0053
+  -------         PROC          _LCD1602_WRITE_DIRECTIVE
+  D:0007H         SYMBOL        command
+  C:02BBH         LINE#         44
+  C:02BBH         LINE#         45
+  C:02BBH         LINE#         46
+  C:02BDH         LINE#         47
+  C:02BFH         LINE#         48
+  C:02C1H         LINE#         49
+  C:02C3H         LINE#         50
+  C:02C5H         LINE#         51
+  -------         ENDPROC       _LCD1602_WRITE_DIRECTIVE
+  -------         PROC          _LCD1602_WRITE_DIRECTIVE_BUSY
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 4
+
+
+  D:0007H         SYMBOL        command
+  C:02F3H         LINE#         53
+  C:02F3H         LINE#         54
+  C:02F3H         LINE#         55
+  C:02F6H         LINE#         56
+  C:02F8H         LINE#         57
+  C:02FAH         LINE#         58
+  C:02FCH         LINE#         59
+  C:02FEH         LINE#         60
+  C:0300H         LINE#         61
+  -------         ENDPROC       _LCD1602_WRITE_DIRECTIVE_BUSY
+  -------         PROC          LCD1602_INIT
+  C:025BH         LINE#         63
+  C:025BH         LINE#         64
+  C:025BH         LINE#         65
+  C:025DH         LINE#         66
+  C:0260H         LINE#         67
+  C:0260H         LINE#         68
+  C:0263H         LINE#         69
+  C:0263H         LINE#         70
+  C:0266H         LINE#         71
+  C:0269H         LINE#         72
+  C:026EH         LINE#         73
+  C:0273H         LINE#         74
+  C:0278H         LINE#         75
+  C:027DH         LINE#         76
+  -------         ENDPROC       LCD1602_INIT
+  -------         PROC          _LCD1602_WRITE_ADDRESS
+  D:0006H         SYMBOL        x
+  D:0005H         SYMBOL        y
+  C:029AH         LINE#         79
+  C:029CH         LINE#         80
+  C:029CH         LINE#         81
+  C:029FH         LINE#         82
+  C:02A2H         LINE#         83
+  C:02A5H         LINE#         84
+  C:02A5H         LINE#         85
+  C:02A6H         LINE#         86
+  C:02A8H         LINE#         88
+  C:02A8H         LINE#         89
+  C:02B1H         LINE#         90
+  C:02B1H         LINE#         91
+  -------         ENDPROC       _LCD1602_WRITE_ADDRESS
+  -------         PROC          _LCD1602_DISPLAY
+  D:0006H         SYMBOL        x
+  D:0005H         SYMBOL        y
+  D:0004H         SYMBOL        d
+  C:0301H         LINE#         93
+  C:0303H         LINE#         94
+  C:0303H         LINE#         95
+  C:0306H         LINE#         96
+  -------         ENDPROC       _LCD1602_DISPLAY
+  -------         PROC          DHT_TRANSMIT_DATA
+  -------         DO            
+  D:0007H         SYMBOL        d
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 5
+
+
+  C:01F4H         LINE#         99
+  C:01F4H         LINE#         100
+  C:01F4H         LINE#         101
+  C:01F6H         LINE#         102
+  C:01F7H         LINE#         103
+  C:01F7H         LINE#         104
+  C:01F7H         LINE#         107
+  C:01FAH         LINE#         108
+  C:01FDH         LINE#         109
+  C:01FFH         LINE#         110
+  C:0201H         LINE#         111
+  C:0204H         LINE#         112
+  C:0206H         LINE#         115
+  C:0209H         LINE#         116
+  C:020CH         LINE#         117
+  C:020EH         LINE#         118
+  C:0210H         LINE#         119
+  C:0213H         LINE#         120
+  C:0215H         LINE#         122
+  C:0218H         LINE#         123
+  C:0218H         LINE#         124
+  C:021BH         LINE#         126
+  C:021EH         LINE#         127
+  C:0221H         LINE#         128
+  C:0223H         LINE#         129
+  C:0225H         LINE#         130
+  C:0228H         LINE#         131
+  C:022AH         LINE#         132
+  C:022AH         LINE#         133
+  C:022EH         LINE#         134
+  C:0232H         LINE#         135
+  C:0232H         LINE#         136
+  -------         ENDPROC       DHT_TRANSMIT_DATA
+  -------         PROC          MCU_GET_DATA_FROM_DHT
+  C:00D7H         LINE#         138
+  C:00D7H         LINE#         139
+  C:00D7H         LINE#         141
+  C:00D9H         LINE#         142
+  C:00DBH         LINE#         145
+  C:00DEH         LINE#         146
+  C:00E1H         LINE#         147
+  C:00E3H         LINE#         149
+  C:00E5H         LINE#         150
+  C:00E8H         LINE#         151
+  C:00EAH         LINE#         154
+  C:00ECH         LINE#         155
+  C:00EFH         LINE#         156
+  C:00F2H         LINE#         157
+  C:00F4H         LINE#         158
+  C:00F6H         LINE#         159
+  C:00F9H         LINE#         160
+  C:00FBH         LINE#         163
+  C:00FEH         LINE#         164
+  C:0101H         LINE#         165
+  C:0103H         LINE#         166
+  C:0105H         LINE#         167
+  C:0108H         LINE#         168
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 6
+
+
+  C:010AH         LINE#         172
+  C:010DH         LINE#         173
+  C:0110H         LINE#         174
+  C:0112H         LINE#         175
+  C:0114H         LINE#         176
+  C:0117H         LINE#         177
+  C:0119H         LINE#         179
+  C:011EH         LINE#         180
+  C:0123H         LINE#         181
+  C:0128H         LINE#         182
+  C:012DH         LINE#         183
+  C:0132H         LINE#         185
+  C:0135H         LINE#         186
+  C:0138H         LINE#         187
+  C:013AH         LINE#         188
+  C:013CH         LINE#         189
+  C:013FH         LINE#         190
+  C:0141H         LINE#         191
+  C:0162H         LINE#         192
+  C:0162H         LINE#         193
+  C:0165H         LINE#         194
+  C:0165H         LINE#         196
+  C:0165H         LINE#         197
+  C:0167H         LINE#         198
+  C:0167H         LINE#         199
+  -------         ENDPROC       MCU_GET_DATA_FROM_DHT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         201
+  C:0003H         LINE#         202
+  C:0003H         LINE#         203
+  C:0006H         LINE#         205
+  C:0009H         LINE#         207
+  C:000BH         LINE#         209
+  C:000DH         LINE#         211
+  C:0010H         LINE#         212
+  C:0010H         LINE#         213
+  C:0010H         LINE#         214
+  C:0016H         LINE#         215
+  C:0016H         LINE#         216
+  C:0020H         LINE#         217
+  C:002AH         LINE#         218
+  C:0032H         LINE#         219
+  C:003BH         LINE#         220
+  C:0044H         LINE#         221
+  C:0054H         LINE#         222
+  C:0066H         LINE#         223
+  C:006FH         LINE#         225
+  C:0078H         LINE#         226
+  C:0081H         LINE#         227
+  C:0091H         LINE#         228
+  C:00A3H         LINE#         229
+  C:00ACH         LINE#         230
+  C:00B5H         LINE#         231
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/05/2018  17:32:36  PAGE 7
+
+
+  -------         ENDMOD        DHT61
+
+  -------         MODULE        ?C?IMUL
+  C:0233H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SLCMP
+  C:0245H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+Program Size: data=14.0 xdata=0 code=779
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
