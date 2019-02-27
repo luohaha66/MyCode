@@ -11,6 +11,8 @@
 .vscode/
 *.pyc
 *.idea/
+*.py___jb_tmp___
+*.txt
 *venv/
 *.jpg
 *.log

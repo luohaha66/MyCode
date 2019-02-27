@@ -26,7 +26,7 @@ def translate():
     #data['action']='FY_BY_REALTIME'
     #data['typoResult']='false'
     data = urllib.parse.urlencode(data).encode('UTF-8')
-    req = urllib.request.Request(url, data, head);
+    req = urllib.request.Request(url, data, head)
     response = urllib.request.urlopen(req)
     result = json.loads(response.read())
     print('result is %s' % result['translateResult'][0][0]['tgt'])
