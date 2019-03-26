@@ -2,21 +2,22 @@ import re
 
 
 def replace(r_str, o_str):
-    return re.sub(rf'{r_str}.*?\s', f'{r_str} ', o_str)
+    return re.sub(rf'{r_str}/.*?\s', f'{r_str} ', o_str)
 
 
 if __name__ == '__main__':
-    str_list = ['/aa/bb/cc', '/aa/ff/ee', '/aa/bb', '/aa/ff', '/dd', '/dd/ee', '/ff/aa', '/ff', '/aaa/ddd/eee',
-                '/aaa/fff', '/aaa/fff/eee', '/aaa/ccc']
-    path = f'{str_list[0]} '
+    path = '/aa/bb/cc '
+    str_list = ['/aa/ff/ee', '/aa/bb', '/aa/ff', '/dd', '/dd/ee', '/ff/aa', '/ff', '/www/ddd/eee',
+                '/www/ww/fff', '/ww', '/www/fff/eee', '/aaa/ccc']
     for each in str_list:
         path = replace(each, path)
-        if each not in path:
+        if not re.search(rf'{each}/', path):
             exist = False
             for e in path.split(' '):
-                if e and each[0: len(e)] == e:
+                if e and re.search(rf'^{e}/', each):
                     exist = True
                     break
             if not exist:
                 path = f'{path}{each} '
-    print(path)
+        # print(path)
+    print(set(path.split(' ')))
