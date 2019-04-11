@@ -1,23 +1,28 @@
+"""
+
+"""
+
+
 class Solution:
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
+    def reverse(self, x: int) -> int:
 
-        if x >= 2 ** 31 or x <= -2 ** 31 - 1:
+        if x >= 2147483647 or x <= -2147483648:
             return 0
+
         y = 0
-        if x > 0:
-            flag = 1
+        a = abs(x)
+        while a != 0:
+            reminder = a % 10
+            a = int(a / 10)
+            y = y * 10 + reminder
+
+        if x > 0 and y < 2147483647:
+            return y
+        elif x < 0 and y <= 2147483647:
+            return -y
         else:
-            flag = -1
-        x = abs(x)
-        while x != 0:
-            a = x % 10
-            x = int(x / 10)
-            y = y * 10 + a
-        return y * flag
+            return 0
 
 
-print(Solution().reverse(153423469))
+print(Solution().reverse(15342346))
+print(2 ** 31, -2 ** 31 - 1)
