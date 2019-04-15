@@ -12,8 +12,7 @@ class Solution:
         y = 0
         a = abs(x)
         while a != 0:
-            reminder = a % 10
-            a = int(a / 10)
+            a, reminder = divmod(a, 10)
             y = y * 10 + reminder
 
         if x > 0 and y < 2147483647:

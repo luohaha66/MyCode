@@ -17,7 +17,51 @@ The median is (2 + 3)/2 = 2.5
 
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2) -> float:
-        # method one cost time: 0:00:12.648189
+        # method one cost time: 0:00:27.867250
+        s1 = s2 = num = 0
+        m = len(nums1)
+        n = len(nums2)
+        list_nums = []
+
+        if not nums1:
+            center = n // 2
+            if n % 2:
+                return nums2[center]
+            else:
+                return (nums2[center] + nums2[center - 1]) / 2
+        elif not nums2:
+            center = m // 2
+            if m % 2:
+                return nums1[center]
+            else:
+                return (nums1[center] + nums1[center - 1]) / 2
+
+        while s1 < m and s2 < n:
+            if nums1[s1] <= nums2[s2]:
+                num = nums1[s1]
+                s1 += 1
+            else:
+                num = nums2[s2]
+                s2 += 1
+            list_nums.append(num)
+
+        while s1 < m:
+            num = nums1[s1]
+            s1 += 1
+            list_nums.append(num)
+
+        while s2 < n:
+            num = nums2[s2]
+            s2 += 1
+            list_nums.append(num)
+
+        list_len = m + n
+        center = list_len // 2
+        if list_len % 2:
+            return list_nums[center]
+        else:
+            return (list_nums[center] + list_nums[center - 1]) / 2
+        # method one cost time: 0:00:07.344753
         nums1.extend(nums2)
         nums1.sort()
         list_len = len(nums1)
@@ -26,7 +70,7 @@ class Solution:
             return float((nums1[center] + nums1[center - 1]) / 2)
         return float(nums1[center])
 
-        # method one cost time: 0:00:00.559505
+        # method one cost time: 0:00:05.556619
         # condition:
         # nums2[j−1] ≤ nums1[i] and nums1[i-1] ≤ nums2[j], j = (m + n + 1) / 2 - i
 
@@ -72,7 +116,7 @@ class Solution:
 
 import datetime
 a = datetime.datetime.now()
-num1 = [each for each in range(10)] * 10000000
-num2 = [each for each in range(0, 20, 2)] * 10000000
+num1 = [each for each in range(50000000)]
+num2 = [each for each in range(0, 50000000, 2)]
 print(Solution().findMedianSortedArrays(num1, num2))
 print('cost: ', datetime.datetime.now() - a)
