@@ -45,104 +45,28 @@ Output: false
 """
 
 
-class BaseStr:
-    def __init__(self, p: str):
-        self.p = p
-        self.index = 0
-        self.len = len(p)
-
-    def get(self):
-        if self.index < self.len:
-            return self.p[self.index]
-        return None
-
-    def get_last(self):
-        if self.index:
-            return self.p[self.index - 1]
-        return None
-
-    def get_next(self):
-        if self.index + 1 < self.len:
-            return self.p[self.index + 1]
-        return None
-
-    def next(self):
-        self.index += 1
-
-
-class Source(BaseStr):
-    ...
-
-
-class Pattern(BaseStr):
-    ...
-
-
 class Solution:
-    def __init__(self):
-        self.character = {each: 0 for each in 'abcdefghijklmnopqrstuvwxyz'}
-
-    def is_character(self, char: str):
-        return char in self.character
-
-    def is_dot(self, char: str):
-        return char == '.'
-
-    def is_asterisk(self, char: str):
-        return char == '*'
-
-    def match_character(self, s: Source, p: Pattern):
-        char = s.get()
-        if char:
-            if char == p.get():
-                s.next()
-                p.next()
-                return True
-            return False
-        return False
-
-    def match_dot(self, s: Source, p: Pattern):
-        char = s.get()
-        if char:
-            s.next()
-            p.next()
-            return True
-        # pattern '.*' and source str is reaching the end
-        elif p.get_next() and p.get_next() == '*':
-            p.next()
-            return True
-        else:
-            return False
-
-    def find_char(self, s: Source, p: str):
-        while s.get() == p:
-            s.next()
-
-    def find_any(self, s: Source, p: str):
-        if p:
-            while s.get() != p:
-                s.next()
-        else:
-            while s.get():
-                s.next()
-
-    def match_asterisk(self, s: Source, p: Pattern):
-        # '*' can only use with the combination of the last char
-        char = p.get_last()
-        if char:
-            if self.is_character(char):
-                # find char in source str zero or more times
-                self.find_char(s, char)
-            elif self.is_dot(char):
-                p.next()
-                p_char = p.get()
-                while p_char and not self.is_character(p_char):
-                    p.next()
-                    p_char = p.get()
-                    if self.is_asterisk(p_char):
-                        return False
-                self.find_any(s, p_char)
-            return True
+    cache = None
 
     def isMatch(self, s: str, p: str) -> bool:
+        self.cache = [[None for _ in range(len(p) + 1)] for _ in range(len(s) + 1)]
+        return self.match(0, 0, s, p)
 
+    def match(self, i: int, j: int, s: str, p: str) -> bool:
+        print(i, j)
+        if self.cache[i][j] is not None:
+            return self.cache[i][j] is True
+        if j == len(p):
+            ans = i == len(s)
+        else:
+            cur_match = (i < len(s)) and (s[i] == p[j] or p[j] == '.')
+            if j + 1 < len(p) and p[j + 1] == '*':
+                ans = (self.match(i, j + 2, s, p)) or (cur_match and self.match(i + 1, j, s, p))
+            else:
+                ans = cur_match and self.match(i+1, j+1, s, p)
+        self.cache[i][j] = True if ans else False
+        return ans
+
+
+s = Solution()
+print(s.isMatch('aa', 'a*'))
