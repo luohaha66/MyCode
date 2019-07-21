@@ -22,6 +22,21 @@ class Solution:
         if not all(strs) or not strs:
             return ''
 
+        s_min = min(strs)
+        s_max = max(strs)
+
+        if len(s_max) < len(s_min):
+            s_min, s_max = s_max, s_min
+
+        for i, c in enumerate(s_min):
+            if c != s_max[i]:
+                return s_max[:i]
+        return s_min
+
+    def version_one(self, strs: list) -> str:
+        if not all(strs) or not strs:
+            return ''
+
         ss = list(map(set, zip(*strs)))
         res = ''
         for i, x in enumerate(ss):
@@ -31,6 +46,7 @@ class Solution:
             res += x[0]
         return res
 
+    def version_two(self, strs: list) -> str:
         if not all(strs) or not strs:
             return ''
         if len(strs) == 1:
@@ -52,17 +68,6 @@ class Solution:
         if not index:
             return ''
         return first_str[0: index]
-
-        if not all(strs) or not strs:
-            return ''
-
-        s1 = max(strs)
-        s2 = min(strs)
-        for i, c in enumerate(s1):
-            if c != s2[i]:
-                return s2[:i]
-        return s1
-
 
 s = Solution()
 print(s.longestCommonPrefix(["flower", "flow", "flight"]))

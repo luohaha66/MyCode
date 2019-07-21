@@ -48,6 +48,14 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 class Solution:
     def romanToInt(self, s: str) -> int:
+        # if value[char] less than value[char+1], minus value[char], else add value[char]
+        roman = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
+        res = 0
+        for i in range(len(s) - 1):
+            res = res - roman[s[i]] if roman[s[i]] < roman[s[i + 1]] else res + roman[s[i]]
+        return res + roman[s[-1]]
+
+    def version_one(self, s: str) -> int:
         values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
         reps = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
         num = 0
@@ -57,13 +65,6 @@ class Solution:
                 s = s.replace(reps[i], '', 1)
                 num += values[i]
         return num
-
-        # if value[char] less than value[char+1], minus value[char], else add value[char]
-        roman = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
-        res = 0
-        for i in range(len(s) - 1):
-            res = res - roman[s[i]] if roman[s[i]] < roman[s[i + 1]] else res + roman[s[i]]
-        return res + roman[s[-1]]
 
 
 s = Solution()

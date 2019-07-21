@@ -67,7 +67,7 @@ class Solution:
             return int(num)
         return 0
 
-    def myAtoi(self, strs: str) -> int:
+    def version_one(self, strs: str) -> int:
         str_strip_blank = strs.lstrip(' ')
         if not str_strip_blank:
             return 0
