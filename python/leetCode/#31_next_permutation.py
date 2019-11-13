@@ -12,54 +12,53 @@
 
 class Solution:
     def nextPermutation(self, nums: list) -> None:
-        self.nextPermutation1(nums)
+        self.nextPermutation2(nums)
 
     def nextPermutation1(self, nums: list) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-        len_nums = -len(nums)
+        found = None
+        for i in range(len(nums) - 1):
+            if nums[i] < nums[i + 1]:
+                found = i
 
-        # 从数组末尾开始寻找找，直到找到nums[i] < nums[i + 1], O(n)
-        start_pos = -1
-        while start_pos > len_nums:
-            if nums[start_pos] > nums[start_pos - 1]:
-                break
-            start_pos -= 1
+        if found is None:
+            nums.reverse()
+        else:
+            i, j = found + 1, len(nums) - 1
+            while i < j:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+                j -= 1
+            for i in range(found + 1, len(nums)):
+                if nums[i] > nums[found]:
+                    nums[found], nums[i] = nums[i], nums[found]
+                    break
 
-        if start_pos == len_nums:
-            nums.sort()
-            return
+    def binary_search(self, nums: list, target):
+        start = 0
+        end = len(nums) - 1
 
-        # 找到nums[i + 1] ~ nums[len - 1]比nums[i]大的最小元素，与nums[i]进行交换, O(n)
-        replace_num = nums[start_pos - 1]
-        left_nums = nums[start_pos:]
-        min_value = 30
-        replace_index = 0
-        for i in range(len(left_nums)):
-            value = left_nums[i] - replace_num
-            if 0 < value < min_value:
-                replace_index = i
-                min_value = value
-        nums[start_pos - 1] = left_nums[replace_index]
-        nums[start_pos + replace_index] = replace_num
+        if 0 == end:
+            return 0
 
-        # 排序nums[i + 1] ~ nums[len -1]
-        # 计数排序，O(n+k)
-        print(start_pos)
-        if start_pos < -1:
-            count_list = [0 for _ in range(30)]
-            for i in range(start_pos, 0, 1):
-                count_list[nums[i]] += 1
-            print(count_list)
-            for i in range(30):
-                while count_list[i] > 0:
-                    nums[start_pos] = i
-                    print(nums[start_pos])
-                    count_list[i] -= 1
-                    start_pos += 1
+        while start + 1 != end:
+            mid = (start + end) // 2
+            if target >= nums[mid]:
+                end = mid
+            else:
+                start = mid
 
-        print(nums)
+        diff_end = nums[end] - target
+        if diff_end <= 0:
+            return start
+        return end
+
+    def swap(self, nums: list, i: int, j: int):
+        temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
 
     def nextPermutation2(self, nums: list) -> None:
         """
@@ -67,7 +66,7 @@ class Solution:
         """
         len_nums = -len(nums)
 
-        # 从数组末尾开始寻找找，直到找到nums[i] < nums[i + 1], O(n)
+        # 从数组末尾开始寻找，直到找到nums[i] < nums[i + 1], O(n)
         start_pos = -1
         while start_pos > len_nums:
             if nums[start_pos] > nums[start_pos - 1]:
@@ -78,35 +77,19 @@ class Solution:
             nums.sort()
             return
 
-        # 找到nums[i + 1] ~ nums[len - 1]比nums[i]大的最小元素，与nums[i]进行交换, O(n)
-        replace_num = nums[start_pos - 1]
-        left_nums = nums[start_pos:]
-        min_value = 30
-        replace_index = 0
-        for i in range(len(left_nums)):
-            value = left_nums[i] - replace_num
-            if 0 < value < min_value:
-                replace_index = i
-                min_value = value
-        nums[start_pos - 1] = left_nums[replace_index]
-        nums[start_pos + replace_index] = replace_num
+        # 找到nums[i + 1] ~ nums[len - 1]比nums[i]大的最小元素，与nums[i]进行交换,
+        # 二分查找， O(log n)
+        self.swap(nums, start_pos-1,
+                  start_pos+self.binary_search(nums[start_pos:], nums[start_pos - 1]))
+        print(nums)
 
-        # 排序nums[i + 1] ~ nums[len -1]
-        # 计数排序，O(n+k)
-        print(start_pos)
-        if start_pos < -1:
-            count_list = [0 for _ in range(30)]
-            for i in range(start_pos, 0, 1):
-                count_list[nums[i]] += 1
-            print(count_list)
-            for i in range(30):
-                while count_list[i] > 0:
-                    nums[start_pos] = i
-                    print(nums[start_pos])
-                    count_list[i] -= 1
-                    start_pos += 1
-
+        # 倒序nums[i + 1] ~ nums[len -1]， 因为[i + 1] ~ nums[len -1]已经是降序排列
+        end = -1
+        while start_pos < end:
+            self.swap(nums, start_pos, end)
+            start_pos += 1
+            end -= 1
         print(nums)
 
 
-Solution().nextPermutation([11,12,0,27,3,11,21,9,0,15,26,27,17,24,0,16,4,17,14,8,15,8,2,16,10,6,6,24,16,2,18,19,6,10,17,10,21,0,11,13,7,7,2,16,24,25,2,20,12,9,20,19])
+Solution().nextPermutation([1, 1, 5])
