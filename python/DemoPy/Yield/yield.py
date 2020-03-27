@@ -4,7 +4,7 @@ Created on Jul 15, 2018
 @author: Administrator
 '''
 
-import Func.func as h
+# import Func.func as h
 
 def numbers():
     a = 0
@@ -24,4 +24,4 @@ print(c)
 e = (i for i in range(5))
 print(next(e))
 print(sum((i for i in range(10) if i % 2)))
-h.hanoi(2, 'x', 'y', 'z')
+# h.hanoi(2, 'x', 'y', 'z')
