@@ -5,6 +5,7 @@ coding: utf-8
 from matplotlib import pyplot as plt
 import matplotlib
 import random
+import numpy as np
 
 
 def my_range(i: float, j: float, k: float) -> list:
@@ -79,7 +80,7 @@ def bar_graph_h():
 def hist_plot():
     x = [random.randint(10, 50) for _ in range(50)]
 
-    bin_width = 5
+    bin_width = 10
     num_bins = len(x) // bin_width
     plt.hist(x, num_bins)
 
@@ -100,4 +101,5 @@ def hist_plot_1():
 
 
 if __name__ == '__main__':
-    hist_plot_1()
+    # bar_graph_h()
+    x = np.random.normal(size=10)
