@@ -1,0 +1,30 @@
+[user]
+	name = luoweibiao
+	email = luoweibiao@vizvision.com
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[credential]
+	helper = store
+
+[alias]
+	ck = checkout
+	st = status
+	sh = stash
+	shp = stash pop
+	pl = pull --rebase
+	ps = push
+	rc = rebase --continue
+	ra = rebase --abort
+	a = add .
+	cm = commit -m
+	cma = commit --amend
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

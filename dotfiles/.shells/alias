@@ -1,0 +1,54 @@
+# Cute shell shortcuts
+alias ls='ls --sort=extension --color=auto'
+alias psg='ps -aux | grep'
+alias grep='grep --color=auto'
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias show='apt-cache search'
+alias get='sudo apt-get install'
+
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# This one is to take care of make
+# Give me a nice, distinguishable make output
+alias make='clear && make'
+
+# Git Commands
+# Add and Commit are used as functions
+alias gpo='git push origin master'
+alias gp='git pull --rebase'
+alias gs='git status'
+alias gd='git diff'
+alias gr='git reflog'
+alias glf='git ls-files'
+alias ga='git add'
+alias gc='git commit -m'
+alias gca='git commit --amend'
+alias gl='git log'
+alias gst='git stash'
+alias gstp='git stash pop'
+alias gplo='git pull origin master'
+alias gb='git branch -v'
+alias gba='git branch -a'
+
+# Quickly load bashrc
+alias gogo='source ~/.bashrc'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
