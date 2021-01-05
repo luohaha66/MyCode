@@ -19,4 +19,7 @@ processing but left in sys.argv for the command or module to handle
 """
 
 if __name__ == '__main__':
-    ...
+    import sys
+    # python -m about_sys_argv hello world
+    print(sys.argv[0])  # D:\MyCode\python\python39_doc\tutorial\about_sys_argv.py
+    print(sys.argv[1])  # hello
