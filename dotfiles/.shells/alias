@@ -20,10 +20,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# This one is to take care of make
-# Give me a nice, distinguishable make output
-alias make='clear && make'
-
 # Git Commands
 # Add and Commit are used as functions
 alias gpo='git push origin master'
