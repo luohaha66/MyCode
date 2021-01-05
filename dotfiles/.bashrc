@@ -26,5 +26,5 @@ if [ -f ~/.localrc ]; then
 fi
 
 # Welcome message
-echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
+echo -ne "Hello, $NICKNAME! It's "; date '+%A, %B %-d %Y'
 echo
