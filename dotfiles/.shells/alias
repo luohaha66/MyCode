@@ -3,7 +3,7 @@ alias ls='ls --sort=extension --color=auto'
 alias psg='ps -aux | grep'
 alias grep='grep --color=auto'
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alF --time-style=long-iso'
 alias la='ls -A'
 alias l='ls -CF'
 alias show='apt-cache search'

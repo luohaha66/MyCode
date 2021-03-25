@@ -8,7 +8,7 @@ alias ls='ls --sort=extension --color=auto'
 alias psg='ps -aux | grep'
 alias grep='grep --color=auto'
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alF --time-style=long-iso'
 alias la='ls -A'
 alias l='ls -CF'
 alias show='apt-cache search'
@@ -131,7 +131,7 @@ function gitPrompt {
 }
 
 # Patent Pending Prompt
-export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\w${gitC}`__git_ps1`${pointerC}$ ${normalC}"
+export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\w${gitC}\$(gitPrompt)${pointerC}$ ${normalC}"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
