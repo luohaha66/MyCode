@@ -16,4 +16,4 @@ class Solution:
             if target - v in nums_dict:
                 return [nums_dict[target - v], i]
             nums_dict[v] = i
-        return []
+        return None
