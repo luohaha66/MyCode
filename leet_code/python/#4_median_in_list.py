@@ -16,7 +16,7 @@ nums2 = [3, 4]
 
 
 class Solution:
-    def findMedianSortedArrays(self, nums1, nums2) -> float:
+    def findMedianSortedArrays(self, nums1, nums2):
         # method one cost time: 0:00:05.556619
         # condition:
         # nums2[j−1] ≤ nums1[i] and nums1[i-1] ≤ nums2[j], j = (m + n + 1) / 2 - i
@@ -60,7 +60,7 @@ class Solution:
 
                 return (max_of_left + min_of_right) / 2.0
 
-    def version_one(self, nums1, nums2) -> float:
+    def version_one(self, nums1, nums2):
         # method cost time: 0:00:27.867250
         s1 = s2 = 0
         m = len(nums1)
@@ -106,7 +106,7 @@ class Solution:
         else:
             return (list_nums[center] + list_nums[center - 1]) / 2
 
-    def version_two(self, nums1, nums2) -> float:
+    def version_two(self, nums1, nums2):
         # method one cost time: 0:00:07.344753
         nums1.extend(nums2)
         nums1.sort()
