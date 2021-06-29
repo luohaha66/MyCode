@@ -18,7 +18,7 @@ class ListNode:
 
 
 class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode):
         """
         :type l1: ListNode
         :type l2: ListNode
@@ -49,7 +49,7 @@ class Solution:
             ptr3.next = ListNode(carry_bit)
         return l3.next
 
-    def addTwoNumbers1(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def addTwoNumbers1(self, l1: ListNode, l2: ListNode):
 	    pre = ListNode(0)
         cur = pre
         b = 0

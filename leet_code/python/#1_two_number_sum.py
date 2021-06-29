@@ -10,7 +10,7 @@
 
 
 class Solution:
-    def twoSum(self, nums: list, target: int) -> list:
+    def twoSum(self, nums: list, target: int):
         nums_dict = {}
         for i, v in enumerate(nums):
             if target - v in nums_dict:
