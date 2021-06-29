@@ -20,7 +20,7 @@
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring(self, s: str):
         start = max_len = 0
         repeat = {}
         for i in range(len(s)):
