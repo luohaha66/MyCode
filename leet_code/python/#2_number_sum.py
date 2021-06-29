@@ -48,3 +48,25 @@ class Solution:
         if carry_bit != 0:
             ptr3.next = ListNode(carry_bit)
         return l3.next
+
+    def addTwoNumbers1(self, l1: ListNode, l2: ListNode) -> ListNode:
+	    pre = ListNode(0)
+        cur = pre
+        b = 0
+
+        while l1 or l2:
+            s = 0
+            if l1:
+                s += l1.val
+                l1 = l1.next
+            if l2:
+                s += l2.val
+                l2 = l2.next
+            s += b
+            cur.next = ListNode(s%10)
+            cur = cur.next
+            b = s//10
+
+        if b!=0:
+            cur.next = ListNode(1)
+        return pre.next
